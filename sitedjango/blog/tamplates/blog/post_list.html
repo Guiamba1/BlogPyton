@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+
+{%block title%} Meu site snake{%endblock%}
+
+{%block content%}
+
+  {% for post in post_list  %}
+
+   <article>
+
+    <h2 class="btn btn-outline-primary btn-lg">
+      <a href = "{{post.get_absolute_url}}">
+         {{post.titulo}} 
+      </a>
+    </h2>
+
+       <!--p class = "date" -->
+   
+          <p class="bg-primary text-white m-2 p-3 curvas">
+            Publicado no dia: {{post.criadoEm}} ||
+          Autor da publicacao: {{post.autor}}
+       </p>
+      
+       {{post.messagem |linebreaks|truncatewords:10}}
+    </article>
+  
+  {% endfor %}
+
+{%endblock%}

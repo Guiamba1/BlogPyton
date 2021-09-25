@@ -1,0 +1,11 @@
+body{
+    background-color: aqua;
+}
+.curvas{
+    border-radius: 30px !important;
+    
+}
+.curvas:hover{
+    cursor:pointer ;
+    text-transform:uppercase;
+}

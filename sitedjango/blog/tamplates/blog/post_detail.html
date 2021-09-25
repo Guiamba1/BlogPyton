@@ -1,0 +1,20 @@
+
+{% extends 'blog/base.html' %}
+
+{%block title%} 
+
+  {{post.titulo}}
+
+{%endblock%}
+
+<!-- =================================-->
+{%block content%}
+
+ <h2>{{post.titulo}}</h2>
+
+ <p class = "date">
+   Publicado por: {{post.titulo}} no dia {{post.criadoEm}}
+ </p>
+
+ {{post.messagem|linebreaks}}
+{%endblock%}
